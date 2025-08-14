@@ -1,0 +1,174 @@
+<script type="text/javascript">
+        var gk_isXlsx = false;
+        var gk_xlsxFileLookup = {};
+        var gk_fileData = {};
+        function filledCell(cell) {
+          return cell !== '' && cell != null;
+        }
+        function loadFileData(filename) {
+        if (gk_isXlsx && gk_xlsxFileLookup[filename]) {
+            try {
+                var workbook = XLSX.read(gk_fileData[filename], { type: 'base64' });
+                var firstSheetName = workbook.SheetNames[0];
+                var worksheet = workbook.Sheets[firstSheetName];
+
+                // Convert sheet to JSON to filter blank rows
+                var jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, blankrows: false, defval: '' });
+                // Filter out blank rows (rows where all cells are empty, null, or undefined)
+                var filteredData = jsonData.filter(row => row.some(filledCell));
+
+                // Heuristic to find the header row by ignoring rows with fewer filled cells than the next row
+                var headerRowIndex = filteredData.findIndex((row, index) =>
+                  row.filter(filledCell).length >= filteredData[index + 1]?.filter(filledCell).length
+                );
+                // Fallback
+                if (headerRowIndex === -1 || headerRowIndex > 25) {
+                  headerRowIndex = 0;
+                }
+
+                // Convert filtered JSON back to CSV
+                var csv = XLSX.utils.aoa_to_sheet(filteredData.slice(headerRowIndex)); // Create a new sheet from filtered array of arrays
+                csv = XLSX.utils.sheet_to_csv(csv, { header: 1 });
+                return csv;
+            } catch (e) {
+                console.error(e);
+                return "";
+            }
+        }
+        return gk_fileData[filename] || "";
+        }
+        </script><!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>深圳市安夢娜家居科技有限公司</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { font-family: 'Arial', sans-serif; }
+    .hero { background-image: url('https://images.unsplash.com/photo-1616486338812-3dadae4b4e02?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80'); background-size: cover; background-position: center; }
+  </style>
+</head>
+<body class="bg-gray-100">
+  <!-- Header -->
+  <header class="bg-blue-900 text-white py-4">
+    <div class="container mx-auto px-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold">安夢娜家居</h1>
+      <nav>
+        <ul class="flex space-x-6">
+          <li><a href="#home" class="hover:text-blue-300">首页</a></li>
+          <li><a href="#about" class="hover:text-blue-300">关于我们</a></li>
+          <li><a href="#products" class="hover:text-blue-300">产品</a></li>
+          <li><a href="#contact" class="hover:text-blue-300">联系我们</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero py-20 text-white">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-4xl font-bold mb-4">深圳市安夢娜家居科技有限公司</h2>
+      <p class="text-xl mb-6">健康时尚家居 · 安夢娜</p>
+      <p class="text-lg">畅销27年，深圳知名品牌，湾区知名品牌</p>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-8">关于我们</h2>
+      <p class="text-lg text-gray-700 mb-4">
+        深圳市安夢娜家居科技有限公司（Shenzhen Anmosna Home Technology Co., Ltd.）成立于1998年，专注于健康时尚家居产品的研发、生产和销售。历经27年的发展，公司已成为深圳及粤港澳大湾区知名品牌，致力于为消费者提供高品质的家居、床品、服装、箱包及智能设备产品。
+      </p>
+      <p class="text-lg text-gray-700 mb-4">
+        公司拥有40+项专利产品、30+项软件著作权及40+项体系认证，包括ISO质量管理认证、ISO环境管理认证、ISO职业健康安全认证等。我们是国家高新技术企业、省级专精特新企业，同时参与国家标准制定，获得“十佳品质生活品牌”及“中国环境标志产品（纺织品）”等多项殊荣。
+      </p>
+      <p class="text-lg text-gray-700">
+        安夢娜家居以“健康、时尚、环保”为理念，产品涵盖生态纺织品、智能家居设备等，广泛应用于家居、劳保及箱包领域，深受消费者信赖。
+      </p>
+    </div>
+  </section>
+
+  <!-- Certifications Section -->
+  <section id="certifications" class="py-16 bg-gray-100">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-8">企业荣誉与认证</h2>
+      <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-gray-700">
+        <li class="bg-white p-4 rounded-lg shadow">国家高新技术企业</li>
+        <li class="bg-white p-4 rounded-lg shadow">省级专精特新企业</li>
+        <li class="bg-white p-4 rounded-lg shadow">中国环境标志产品（纺织品）</li>
+        <li class="bg-white p-4 rounded-lg shadow">ISO质量管理认证企业</li>
+        <li class="bg-white p-4 rounded-lg shadow">ISO环境管理认证企业</li>
+        <li class="bg-white p-4 rounded-lg shadow">ISO职业健康安全认证企业</li>
+        <li class="bg-white p-4 rounded-lg shadow">履约能力（5A）认证企业</li>
+        <li class="bg-white p-4 rounded-lg shadow">售后服务（10星）认证企业</li>
+        <li class="bg-white p-4 rounded-lg shadow">应急管理（10星）认证企业</li>
+        <li class="bg-white p-4 rounded-lg shadow">国家标准制定参与单位</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section id="products" class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-8">我们的产品</h2>
+      <p class="text-lg text-gray-700 mb-4">
+        安夢娜家居提供多样化的产品线，包括：
+      </p>
+      <ul class="list-disc list-inside text-lg text-gray-700">
+        <li>家居床品：高品质床单、被套、枕套等</li>
+        <li>服装：时尚与功能兼备的家居服饰</li>
+        <li>箱包：耐用且环保的旅行与日常箱包</li>
+        <li>劳保产品：安全、舒适的劳保用品</li>
+        <li>智能设备：创新的家居智能化解决方案</li>
+      </ul>
+      <p class="text-lg text-gray-700 mt-4">
+        所有产品均通过生态纺织品认证，结合40+项专利技术，为客户提供健康、环保的品质生活。
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-16 bg-gray-100">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-8">联系我们</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div>
+          <h3 class="text-xl font-semibold mb-4">公司信息</h3>
+          <p class="text-gray-700"><strong>名称：</strong>深圳市安夢娜家居科技有限公司</p>
+          <p class="text-gray-700"><strong>办公地址：</strong>深圳市龙岗区布吉街道锦龙路万科红大厦1栋4楼</p>
+          <p class="text-gray-700"><strong>工厂地址：</strong>深圳市龙岗区布吉街道京南路金鑫实业1号厂房1-5楼</p>
+          <p class="text-gray-700"><strong>其他地址：</strong></p>
+          <ul class="list-disc list-inside text-gray-700">
+            <li>广东省惠州市博罗县龙溪街道埔上村9102号</li>
+            <li>广东省茂名市茂南区人民南路141号1楼</li>
+            <li>广东省中山市沙溪镇秀山工业区5号</li>
+            <li>江苏省南通市通州区川港镇工业园区F区</li>
+            <li>河北省石家庄市藁城区廉州镇北营村育才路北行东</li>
+            <li>河北省保定市高阳县野王村工业区</li>
+            <li>河北省廊坊市霸州市中亭堤东道与中亭路交叉口</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold mb-4">联系方式</h3>
+          <p class="text-gray-700"><strong>电话：</strong>(0755) 86001666 / 86000288</p>
+          <p class="text-gray-700"><strong>传真：</strong>(0755) 86000388</p>
+          <p class="text-gray-700"><strong>QQ：</strong>1138022888</p>
+          <p class="text-gray-700"><strong>邮箱：</strong>1145215681@qq.com</p>
+          <p class="text-gray-700"><strong>总经理：</strong>杨贵梅</p>
+          <p class="text-gray-700"><strong>总经理电话：</strong>13509689958</p>
+          <p class="text-gray-700"><strong>官网：</strong><a href="http://www.amna.cn" class="text-blue-600 hover:underline">www.amna.cn</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-blue-900 text-white py-4">
+    <div class="container mx-auto px-4 text-center">
+      <p>&copy; 2025 深圳市安夢娜家居科技有限公司. 版权所有.</p>
+    </div>
+  </footer>
+</body>
+</html>
