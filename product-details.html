@@ -47,15 +47,6 @@
                     <h1 class="text-primary text-xl font-bold">安夢娜</h1>
                     <p class="text-xs text-gray-500">健康时尚家居</p>
                 </div>
-            </div>
-            <!-- 桌面导航 -->
-            <div class="hidden md:flex space-x-8">
-                <a href="index.html" class="text-dark hover:text-primary transition-custom font-medium">首页</a>
-                <a href="about.html" class="text-dark hover:text-primary transition-custom font-medium">关于我们</a>
-                <a href="products.html" class="text-dark hover:text-primary transition-custom font-medium">产品中心</a>
-                <a href="honors.html" class="text-dark hover:text-primary transition-custom font-medium">荣誉资质</a>
-                <a href="contact.html" class="text-dark hover:text-primary transition-custom font-medium">联系我们</a>
-            </div>
             <!-- 移动端菜单按钮 -->
             <button id="menuBtn" class="md:hidden text-dark text-2xl focus:outline-none">
                 <i class="fa fa-bars"></i>
@@ -76,54 +67,172 @@
     <!-- 产品详情部分 -->
     <section id="product-details" class="py-24 bg-white pt-32">
         <div class="container mx-auto px-4">
+            <!-- 退出详情按钮 -->
             <div class="flex justify-between items-center mb-12">
                 <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-dark" id="detail-title">产品详情</h2>
-                <a href="products.html" class="text-gray-500 hover:text-primary transition-custom text-2xl">
+                <button id="close-detail" class="text-gray-500 hover:text-primary transition-custom text-2xl">
                     <i class="fa fa-times"></i>
-                </a>
+                </button>
             </div>
 
-            <!-- 床上用品详情 -->
-            <div id="bedding-details" class="detail-content">
+            <!-- 帐篷系列详情 -->
+            <div id="tent-details" class="detail-content hidden">
                 <div class="grid md:grid-cols-2 gap-12 items-center">
                     <div>
-                        <img src="https://picsum.photos/id/1060/800/600" alt="床上用品" class="rounded-lg shadow-lg w-full h-auto">
+                        <img src="products/帐篷围边/遮阳帐篷.png" alt="遮阳帐篷" class="rounded-lg shadow-lg w-full h-auto">
                         <div class="grid grid-cols-4 gap-4 mt-4">
-                            <img src="https://picsum.photos/id/1060/200/150" alt="产品缩略图1" class="rounded cursor-pointer border-2 border-primary">
-                            <img src="https://picsum.photos/id/1059/200/150" alt="产品缩略图2" class="rounded cursor-pointer">
-                            <img src="https://picsum.photos/id/1062/200/150" alt="产品缩略图3" class="rounded cursor-pointer">
-                            <img src="https://picsum.photos/id/1063/200/150" alt="产品缩略图4" class="rounded cursor-pointer">
+                            <img src="products/帐篷围边/遮阳帐篷.png" alt="遮阳帐篷-主图" class="rounded cursor-pointer border-2 border-primary">
+                            <img src="products/帐篷图片202204/救灾帐篷主图.jpg" alt="救灾帐篷" class="rounded cursor-pointer">
+                            <img src="products/帐篷图片202204/帐篷支架包.jpg" alt="帐篷围边-细节1" class="rounded cursor-pointer">
+                            <img src="products/帐篷图片202204/帐篷12.png" alt="帐篷围边-细节2" class="rounded cursor-pointer">
                         </div>
                     </div>
                     <div>
-                        <h3 class="text-2xl font-bold mb-4 text-primary">高品质床上用品套件</h3>
-                        <div class="flex items-center mb-4">
-                            <div class="flex text-yellow-400">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-half-o"></i>
-                            </div>
-                            <span class="ml-2 text-gray-600">(128条评价)</span>
-                        </div>
-                        <p class="text-2xl font-bold text-dark mb-6">¥399.00</p>
+                        <h3 class="text-2xl font-bold mb-4 text-primary">帐篷系列</h3>
+
                         <p class="text-gray-700 mb-6 leading-relaxed">
-                            我们的床上用品套件采用高品质纯棉面料，柔软亲肤，透气性好，给您带来舒适的睡眠体验。套件包括床单、被套和枕套，多种颜色和尺寸可供选择，满足不同家庭的需求。
+                            安梦娜帐篷系列采用高品质防水防晒面料，能够有效抵御各种天气条件。帐篷支架采用高强度铝合金材料，坚固耐用，稳定性好。
                         </p>
                         <div class="mb-6">
-                            <h4 class="font-bold mb-2">颜色选择</h4>
+                            <h4 class="font-bold mb-2">类型选择</h4>
                             <div class="flex space-x-4">
-                                <button class="w-10 h-10 rounded-full bg-blue-500 border-2 border-primary"></button>
-                                <button class="w-10 h-10 rounded-full bg-gray-200"></button>
-                                <button class="w-10 h-10 rounded-full bg-pink-200"></button>
-                                <button class="w-10 h-10 rounded-full bg-green-200"></button>
+                                <button class="px-4 py-2 border border-gray-300 rounded hover:border-primary hover:text-primary transition-custom bg-primary text-white">遮阳帐篷</button>
+                                <button class="px-4 py-2 border border-gray-300 rounded hover:border-primary hover:text-primary transition-custom">救灾帐篷</button>
+                            </div>
+                        </div>
+                        <div class="mb-8">
+                            <h4 class="font-bold mb-2">规格选择</h4>
+                            <div class="flex space-x-4">
+                                <button class="px-4 py-2 border border-gray-300 rounded hover:border-primary hover:text-primary transition-custom">4-6人</button>
+                                <button class="px-4 py-2 border border-gray-300 rounded hover:border-primary hover:text-primary transition-custom">6-8人</button>
+                                <button class="px-4 py-2 border border-gray-300 rounded hover:border-primary hover:text-primary transition-custom">8-10人</button>
+                            </div>
+                        </div>
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <a href="https://taobao.com" target="_blank" class="bg-primary text-white px-8 py-3 rounded-lg font-bold hover:bg-primary/90 transition-custom transform hover:scale-[1.02] flex-1 flex items-center justify-center">
+                                立即购买
+                            </a>
+                            <button class="border-2 border-primary text-primary px-8 py-3 rounded-lg font-bold hover:bg-primary hover:text-white transition-custom flex items-center justify-center">
+                                <i class="fa fa-shopping-cart mr-2"></i> 加入购物车
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-16">
+                    <div class="border-t border-gray-200 pt-8">
+                        <h3 class="text-xl font-bold mb-4">产品详情</h3>
+                        <p class="text-gray-700 mb-4">
+                            安梦娜帐篷系列采用高品质防水防晒面料，能够有效抵御各种天气条件。帐篷支架采用高强度铝合金材料，坚固耐用，稳定性好，能够承受强风暴雨的考验。
+                        </p>
+                        <p class="text-gray-700 mb-4">
+                            我们的帐篷设计合理，空间宽敞，通风良好，内部设施齐全，为您提供舒适的户外居住环境。无论是露营、救灾还是其他户外活动，我们的帐篷都是您的理想选择。
+                        </p>
+                        <h4 class="font-bold mt-6 mb-2">产品特点</h4>
+                        <ul class="list-disc list-inside text-gray-700 space-y-2">
+                            <li>高品质防水防晒面料</li>
+                            <li>高强度铝合金支架，坚固耐用</li>
+                            <li>空间宽敞，通风良好</li>
+                            <li>内部设施齐全，舒适实用</li>
+                            <li>多种款式和规格可供选择</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 折叠床系列详情 -->
+            <div id="foldable-bed-details" class="detail-content hidden">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <img src="products/折叠床图片11/折叠床展开.jpg" alt="钢木折叠床" class="rounded-lg shadow-lg w-full h-auto">
+                        <div class="grid grid-cols-4 gap-4 mt-4">
+                            <img src="products/折叠床图片11/折叠床展开.jpg" alt="钢木折叠床-展开" class="rounded cursor-pointer border-2 border-primary">
+                            <img src="products/省海绵折叠床/微信图片_20250905132814_121_299.jpg" alt="钢木折叠床-细节" class="rounded cursor-pointer">
+                            <img src="products/木板折叠床2024/木板折叠床.jpg" alt="钢木折叠床-侧面" class="rounded cursor-pointer">
+                            <img src="products/钢塑折叠床/展开——承压.jpg" alt="钢塑折叠床" class="rounded cursor-pointer">
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold mb-4 text-primary">折叠床系列</h3>
+
+                        <p class="text-gray-700 mb-6 leading-relaxed">
+                            高品质折叠床系列，包括钢塑折叠床、木板折叠床、牛津布折叠床、海绵折叠床。采用坚固耐用的材质，易于折叠收纳，适合临时住宿、医院陪护、户外露营等多种场景使用。
+                        </p>
+                        <div class="mb-6">
+                            <h4 class="font-bold mb-2">类型选择</h4>
+                            <div class="flex space-x-4 flex-wrap">
+                                <button class="px-4 py-2 border border-gray-300 rounded hover:border-primary hover:text-primary transition-custom bg-primary text-white">钢塑折叠床</button>
+                                <button class="px-4 py-2 border border-gray-300 rounded hover:border-primary hover:text-primary transition-custom">木板折叠床</button>
+                                <button class="px-4 py-2 border border-gray-300 rounded hover:border-primary hover:text-primary transition-custom">牛津布折叠床</button>
+                                <button class="px-4 py-2 border border-gray-300 rounded hover:border-primary hover:text-primary transition-custom">海绵折叠床</button>
                             </div>
                         </div>
                         <div class="mb-8">
                             <h4 class="font-bold mb-2">尺寸选择</h4>
                             <div class="flex space-x-4">
-                                <button class="px-4 py-2 border border-gray-300 rounded hover:border-primary hover:text-primary transition-custom bg-primary text-white">1.5米</button>
+                                <button class="px-4 py-2 border border-gray-300 rounded hover:border-primary hover:text-primary transition-custom">1.0米</button>
+                                <button class="px-4 py-2 border border-gray-300 rounded hover:border-primary hover:text-primary transition-custom">1.2米</button>
+                                <button class="px-4 py-2 border border-gray-300 rounded hover:border-primary hover:text-primary transition-custom">1.5米</button>
+                            </div>
+                        </div>
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <a href="https://taobao.com" target="_blank" class="bg-primary text-white px-8 py-3 rounded-lg font-bold hover:bg-primary/90 transition-custom transform hover:scale-[1.02] flex-1 flex items-center justify-center">
+                                立即购买
+                            </a>
+                            <button class="border-2 border-primary text-primary px-8 py-3 rounded-lg font-bold hover:bg-primary hover:text-white transition-custom flex items-center justify-center">
+                                <i class="fa fa-shopping-cart mr-2"></i> 加入购物车
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-16">
+                    <div class="border-t border-gray-200 pt-8">
+                        <h3 class="text-xl font-bold mb-4">产品详情</h3>
+                        <p class="text-gray-700 mb-4">
+                            安梦娜折叠床系列采用高品质钢材和木材或塑料材质，结构稳固，承重能力强，能够满足不同人群的需求。折叠设计方便收纳和携带，不占用太多空间。
+                        </p>
+                        <p class="text-gray-700 mb-4">
+                            我们的折叠床经过精心设计，床垫舒适，睡眠体验良好。同时，我们注重产品的安全性和耐用性，确保每一件产品都符合高品质标准。
+                        </p>
+                        <h4 class="font-bold mt-6 mb-2">产品特点</h4>
+                        <ul class="list-disc list-inside text-gray-700 space-y-2">
+                            <li>高品质材质，结构稳固</li>
+                            <li>折叠设计，方便收纳和携带</li>
+                            <li>舒适床垫，良好的睡眠体验</li>
+                            <li>承重能力强，安全可靠</li>
+                            <li>多种款式和尺寸可供选择</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 蚊帐系列详情 -->
+            <div id="mosquito-net-details" class="detail-content hidden">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <img src="products/圆顶蚊帐/大主图.jpg" alt="圆顶蚊帐" class="rounded-lg shadow-lg w-full h-auto">
+                        <div class="grid grid-cols-4 gap-4 mt-4">
+                            <img src="products/圆顶蚊帐/大主图.jpg" alt="圆顶蚊帐-主图" class="rounded cursor-pointer border-2 border-primary">
+                            <img src="products/蚊帐 蒙古包/蚊帐蒙古包主图.jpg" alt="蚊帐 蒙古包-主图" class="rounded cursor-pointer">
+                            <img src="products/蚊帐 蒙古包/蚊帐蒙古包副图.jpg" alt="蚊帐 蒙古包-副图" class="rounded cursor-pointer">
+                            <img src="products/蚊帐图片/蚊帐图片/微信图片_20250917111251_35_474.jpg" alt="包装" class="rounded cursor-pointer">
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold mb-4 text-primary">蚊帐系列</h3>
+                        <p class="text-gray-700 mb-6 leading-relaxed">
+                            高品质蚊帐系列，包括圆顶蚊帐、方顶蚊帐等多种款式。采用加密网纱，防蚊透气，安装简便，适合各种床型使用。
+                        </p>
+                        <div class="mb-6">
+                            <h4 class="font-bold mb-2">类型选择</h4>
+                            <div class="flex space-x-4">
+                                <button class="px-4 py-2 border border-gray-300 rounded hover:border-primary hover:text-primary transition-custom bg-primary text-white">圆顶蚊帐</button>
+                                <button class="px-4 py-2 border border-gray-300 rounded hover:border-primary hover:text-primary transition-custom">方顶蚊帐</button>
+                            </div>
+                        </div>
+                        <div class="mb-8">
+                            <h4 class="font-bold mb-2">尺寸选择</h4>
+                            <div class="flex space-x-4">
+                                <button class="px-4 py-2 border border-gray-300 rounded hover:border-primary hover:text-primary transition-custom">1.5米</button>
                                 <button class="px-4 py-2 border border-gray-300 rounded hover:border-primary hover:text-primary transition-custom">1.8米</button>
                                 <button class="px-4 py-2 border border-gray-300 rounded hover:border-primary hover:text-primary transition-custom">2.0米</button>
                             </div>
@@ -142,19 +251,375 @@
                     <div class="border-t border-gray-200 pt-8">
                         <h3 class="text-xl font-bold mb-4">产品详情</h3>
                         <p class="text-gray-700 mb-4">
-                            安梦娜床上用品套件采用100%纯棉面料，经过精梳工艺处理，纱线更加细密，面料更加柔软光滑。我们注重每一个细节，从面料选择到生产工艺，都严格把控，确保产品质量。
+                            安梦娜蚊帐系列采用加密网纱，能够有效阻挡蚊虫进入，同时保持良好的透气性。我们的蚊帐设计合理，安装简便，适合各种床型使用。
                         </p>
                         <p class="text-gray-700 mb-4">
-                            套件采用活性印染工艺，色彩鲜艳，色牢度高，不易褪色。同时，我们的产品经过严格的环保检测，不含有害物质，安全健康，适合全家人使用。
+                            我们注重产品的细节和质量，确保每一件产品都符合高品质标准。无论是圆顶蚊帐还是方顶蚊帐，都能为您提供一个舒适、安全的睡眠环境。
+                        </p>
+                        
+                        <!-- 圆顶蚊帐详情图 -->
+                        <h4 class="font-bold mt-6 mb-4">圆顶蚊帐详情</h4>
+                        <div class="my-6 grid grid-cols-1 gap-4">
+                            <img src="products/圆顶蚊帐/圆形宫廷蚊帐详情长图.jpg" alt="圆顶蚊帐详情图" class="w-full rounded-lg shadow-md">
+                        </div>
+                        
+                        <!-- 蚊帐 蒙古包详情图 -->
+                        <h4 class="font-bold mt-6 mb-4">蒙古包蚊帐详情</h4>
+                        <div class="my-6 grid grid-cols-1 gap-4">
+                            <img src="products/蚊帐 蒙古包/详情图1.jpg" alt="蒙古包蚊帐详情图1" class="w-full rounded-lg shadow-md">
+                            <img src="products/蚊帐 蒙古包/详情图2.jpg" alt="蒙古包蚊帐详情图2" class="w-full rounded-lg shadow-md">
+                            <img src="products/蚊帐 蒙古包/详情图3.jpg" alt="蒙古包蚊帐详情图3" class="w-full rounded-lg shadow-md">
+                            <img src="products/蚊帐 蒙古包/详情图4.jpg" alt="蒙古包蚊帐详情图4" class="w-full rounded-lg shadow-md">
+                            <img src="products/蚊帐 蒙古包/详情图5.jpg" alt="蒙古包蚊帐详情图5" class="w-full rounded-lg shadow-md">
+                        </div>
+                        <h4 class="font-bold mt-6 mb-2">产品特点</h4>
+                        <ul class="list-disc list-inside text-gray-700 space-y-2">
+                            <li>加密网纱，有效防蚊</li>
+                            <li>良好的透气性，舒适睡眠</li>
+                            <li>安装简便，适合各种床型</li>
+                            <li>高品质材质，耐用可靠</li>
+                            <li>多种款式和尺寸可供选择</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 军用被系列详情 -->
+            <div id="military-quilt-details" class="detail-content hidden">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <img src="products/军用被/棉被.png" alt="军用棉被" class="rounded-lg shadow-lg w-full h-auto">
+                        <div class="grid grid-cols-4 gap-4 mt-4">
+                            <img src="products/军用被/棉被.png" alt="军用棉被-主图" class="rounded cursor-pointer border-2 border-primary">
+                            <img src="products/军用被/上床照片.jpg" alt="军用被-细节1" class="rounded cursor-pointer">
+                            <img src="products/军用被/军绿色三件套.jpg" alt="军用被-细节2" class="rounded cursor-pointer">
+                            <img src="products/军用被/纯棉三件套以及规格.jpg" alt="军用被-细节3" class="rounded cursor-pointer">
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold mb-4 text-primary">军用被系列</h3>
+                        <p class="text-gray-700 mb-6 leading-relaxed">
+                            高品质军用被系列，采用优质棉花填充，保暖舒适，耐用可靠。符合军用标准，适合军队、野外作业、救灾等场景使用。
+                        </p>
+                        <div class="mb-6">
+                            <h4 class="font-bold mb-2">类型选择</h4>
+                            <div class="flex space-x-4">
+                                <button class="px-4 py-2 border border-gray-300 rounded hover:border-primary hover:text-primary transition-custom bg-primary text-white">棉被</button>
+                                <button class="px-4 py-2 border border-gray-300 rounded hover:border-primary hover:text-primary transition-custom">毛毯</button>
+                            </div>
+                        </div>
+                        <div class="mb-8">
+                            <h4 class="font-bold mb-2">规格选择</h4>
+                            <div class="flex space-x-4">
+                                <button class="px-4 py-2 border border-gray-300 rounded hover:border-primary hover:text-primary transition-custom">标准款</button>
+                                <button class="px-4 py-2 border border-gray-300 rounded hover:border-primary hover:text-primary transition-custom">加厚款</button>
+                            </div>
+                        </div>
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <a href="https://taobao.com" target="_blank" class="bg-primary text-white px-8 py-3 rounded-lg font-bold hover:bg-primary/90 transition-custom transform hover:scale-[1.02] flex-1 flex items-center justify-center">
+                                立即购买
+                            </a>
+                            <button class="border-2 border-primary text-primary px-8 py-3 rounded-lg font-bold hover:bg-primary hover:text-white transition-custom flex items-center justify-center">
+                                <i class="fa fa-shopping-cart mr-2"></i> 加入购物车
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-16">
+                    <div class="border-t border-gray-200 pt-8">
+                        <h3 class="text-xl font-bold mb-4">产品详情</h3>
+                        <p class="text-gray-700 mb-4">
+                            安梦娜军用被系列采用优质棉花填充，保暖性能好，耐用可靠。我们的产品符合军用标准，经过严格的质量检测，确保每一件产品都符合高品质要求。
+                        </p>
+                        <p class="text-gray-700 mb-4">
+                            军用被系列适合军队、野外作业、救灾等各种场景使用，能够为您提供温暖舒适的睡眠环境。我们注重产品的细节和质量，确保每一件产品都能满足客户的需求。
                         </p>
                         <h4 class="font-bold mt-6 mb-2">产品特点</h4>
                         <ul class="list-disc list-inside text-gray-700 space-y-2">
-                            <li>100%纯棉面料，柔软亲肤</li>
-                            <li>活性印染，色彩鲜艳，不易褪色</li>
-                            <li>精梳工艺，面料更加光滑细腻</li>
-                            <li>环保健康，不含有害物质</li>
-                            <li>多种颜色和尺寸可供选择</li>
+                            <li>优质棉花填充，保暖性能好</li>
+                            <li>符合军用标准，质量可靠</li>
+                            <li>耐用性强，使用寿命长</li>
+                            <li>适合各种户外和应急场景</li>
+                            <li>多种规格可供选择</li>
                         </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 家居家具详情 -->
+            <div id="furniture-details" class="detail-content hidden">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <img src="products/安梦娜办公家具/A15.jpg" alt="办公家具" class="rounded-lg shadow-lg w-full h-auto">
+                        <div class="grid grid-cols-4 gap-4 mt-4">
+                            <img src="products/安梦娜办公家具/A15.jpg" alt="办公家具-主图" class="rounded cursor-pointer border-2 border-primary">
+                            <img src="products/安梦娜办公家具/A17.jpg" alt="办公家具-细节1" class="rounded cursor-pointer">
+                            <img src="products/安梦娜儿童家具/幼儿园展示柜.jpg" alt="办公家具-细节2" class="rounded cursor-pointer">
+                            <img src="products/安梦娜儿童家具/儿童实木移动美工台.jpg" alt="办公家具-细节3" class="rounded cursor-pointer">
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold mb-4 text-primary">家居家具</h3>
+                        <p class="text-gray-700 mb-6 leading-relaxed">
+                            高品质家居家具系列，包括办公家具、学校家具等多种款式。采用现代简约设计，坚固耐用的材质，适合办公室、学校、家庭等多种场景使用。
+                        </p>
+                        <div class="mb-6">
+                            <h4 class="font-bold mb-2">类型选择</h4>
+                            <div class="flex space-x-4">
+                                <button class="px-4 py-2 border border-gray-300 rounded hover:border-primary hover:text-primary transition-custom bg-primary text-white">办公家具</button>
+                                <button class="px-4 py-2 border border-gray-300 rounded hover:border-primary hover:text-primary transition-custom">学校家具</button>
+                            </div>
+                        </div>
+                        <div class="mb-8">
+                            <h4 class="font-bold mb-2">规格选择</h4>
+                            <div class="flex space-x-4">
+                                <button class="px-4 py-2 border border-gray-300 rounded hover:border-primary hover:text-primary transition-custom">单人款</button>
+                                <button class="px-4 py-2 border border-gray-300 rounded hover:border-primary hover:text-primary transition-custom">双人款</button>
+                            </div>
+                        </div>
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <a href="https://taobao.com" target="_blank" class="bg-primary text-white px-8 py-3 rounded-lg font-bold hover:bg-primary/90 transition-custom transform hover:scale-[1.02] flex-1 flex items-center justify-center">
+                                立即购买
+                            </a>
+                            <button class="border-2 border-primary text-primary px-8 py-3 rounded-lg font-bold hover:bg-primary hover:text-white transition-custom flex items-center justify-center">
+                                <i class="fa fa-shopping-cart mr-2"></i> 加入购物车
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-16">
+                    <div class="border-t border-gray-200 pt-8">
+                        <h3 class="text-xl font-bold mb-4">产品详情</h3>
+                        <p class="text-gray-700 mb-4">
+                            安梦娜家居家具系列采用现代简约设计风格，注重实用性和美观性的结合。我们的家具采用高品质材质，坚固耐用，能够满足不同场景的使用需求。
+                        </p>
+                        <p class="text-gray-700 mb-4">
+                            无论是办公室还是学校，我们的家具都能为您提供一个舒适、高效的工作和学习环境。我们注重产品的细节和质量，确保每一件产品都符合高品质标准。
+                        </p>
+                        <h4 class="font-bold mt-6 mb-2">产品特点</h4>
+                        <ul class="list-disc list-inside text-gray-700 space-y-2">
+                            <li>现代简约设计，美观实用</li>
+                            <li>高品质材质，坚固耐用</li>
+                            <li>适合多种场景使用</li>
+                            <li>舒适的使用体验</li>
+                            <li>多种款式和规格可供选择</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 应急照明详情 -->
+            <div id="emergency-lighting-details" class="detail-content hidden">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <img src="products/应急灯/应急灯.png" alt="应急灯" class="rounded-lg shadow-lg w-full h-auto">
+                        <div class="grid grid-cols-4 gap-4 mt-4">
+                            <img src="products/应急灯/应急灯.png" alt="应急灯-主图" class="rounded cursor-pointer border-2 border-primary">
+                            <img src="products/应急灯/应急灯各部位.jpg" alt="应急灯-细节1" class="rounded cursor-pointer">
+                            <img src="products/应急灯/应急灯电池.jpg" alt="应急灯-细节2" class="rounded cursor-pointer">
+                            <img src="products/应急灯/应急灯风扇.jpg" alt="手电筒" class="rounded cursor-pointer">
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold mb-4 text-primary">应急照明</h3>
+                        <p class="text-gray-700 mb-6 leading-relaxed">
+                            高品质应急照明系列，包括应急灯、手电筒等多种款式。采用高亮度LED灯珠，长续航电池，适合户外、紧急情况等多种场景使用。
+                        </p>
+                        <div class="mb-6">
+                            <h4 class="font-bold mb-2">类型选择</h4>
+                            <div class="flex space-x-4">
+                                <button class="px-4 py-2 border border-gray-300 rounded hover:border-primary hover:text-primary transition-custom bg-primary text-white">应急灯</button>
+                                <button class="px-4 py-2 border border-gray-300 rounded hover:border-primary hover:text-primary transition-custom">手电筒</button>
+                            </div>
+                        </div>
+                        <div class="mb-8">
+                            <h4 class="font-bold mb-2">规格选择</h4>
+                            <div class="flex space-x-4">
+                                <button class="px-4 py-2 border border-gray-300 rounded hover:border-primary hover:text-primary transition-custom">标准款</button>
+                                <button class="px-4 py-2 border border-gray-300 rounded hover:border-primary hover:text-primary transition-custom">强光款</button>
+                            </div>
+                        </div>
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <a href="https://taobao.com" target="_blank" class="bg-primary text-white px-8 py-3 rounded-lg font-bold hover:bg-primary/90 transition-custom transform hover:scale-[1.02] flex-1 flex items-center justify-center">
+                                立即购买
+                            </a>
+                            <button class="border-2 border-primary text-primary px-8 py-3 rounded-lg font-bold hover:bg-primary hover:text-white transition-custom flex items-center justify-center">
+                                <i class="fa fa-shopping-cart mr-2"></i> 加入购物车
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-16">
+                    <div class="border-t border-gray-200 pt-8">
+                        <h3 class="text-xl font-bold mb-4">产品详情</h3>
+                        <p class="text-gray-700 mb-4">
+                            安梦娜应急照明系列采用高亮度LED灯珠，照明效果好，能耗低。我们的产品配备长续航电池，能够在紧急情况下提供长时间的照明支持。
+                        </p>
+                        <p class="text-gray-700 mb-4">
+                            应急照明系列包括应急灯和手电筒等多种款式，适合户外、紧急情况等各种场景使用。我们注重产品的安全性和可靠性，确保每一件产品都能在关键时刻发挥作用。
+                        </p>
+                        <h4 class="font-bold mt-6 mb-2">产品特点</h4>
+                        <ul class="list-disc list-inside text-gray-700 space-y-2">
+                            <li>高亮度LED灯珠，照明效果好</li>
+                            <li>长续航电池，提供持久照明</li>
+                            <li>适合多种场景使用</li>
+                            <li>安全可靠，质量有保障</li>
+                            <li>多种款式和规格可供选择</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 救灾物资详情 -->
+            <div id="relief-materials-details" class="detail-content hidden">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <img src="products/救灾物资/军大衣.jpg" alt="男防寒服" class="rounded-lg shadow-lg w-full h-auto">
+                        <div class="grid grid-cols-4 gap-4 mt-4">
+                            
+                            <img src="products/救灾物资/军大衣.jpg" alt="救灾帐篷" class="rounded cursor-pointer">
+                            <img src="products/救灾物资/防寒服.jpg" alt="救灾物资-细节" class="rounded cursor-pointer">
+                            <img src="products/救灾物资/2006透气式分体雨衣.jpg" alt="男防寒服-主图" class="rounded cursor-pointer border-2 border-primary">
+                            <img src="products/救灾物资/保暖内衣.jpg" alt="女防寒服" class="rounded cursor-pointer">
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold mb-4 text-primary">救灾物资</h3>
+                        <p class="text-gray-700 mb-6 leading-relaxed">
+                            高品质救灾物资系列，包括防寒服、雨衣、保暖内衣、军大衣。采用高品质材料，坚固耐用，适合救灾、应急等多种场景使用。
+                        </p>
+                        <div class="mb-6">
+                            <h4 class="font-bold mb-2">类型选择</h4>
+                            <div class="flex space-x-4 flex-wrap">
+                                <button class="px-4 py-2 border border-gray-300 rounded hover:border-primary hover:text-primary transition-custom bg-primary text-white">防寒服</button>
+                                <button class="px-4 py-2 border border-gray-300 rounded hover:border-primary hover:text-primary transition-custom">雨衣</button>
+                                <button class="px-4 py-2 border border-gray-300 rounded hover:border-primary hover:text-primary transition-custom">保暖内衣</button>
+                                <button class="px-4 py-2 border border-gray-300 rounded hover:border-primary hover:text-primary transition-custom">军大衣</button>
+                            </div>
+                        </div>
+                        <div class="mb-8">
+                            <h4 class="font-bold mb-2">尺寸选择</h4>
+                            <div class="flex space-x-4">
+                                <button class="px-4 py-2 border border-gray-300 rounded hover:border-primary hover:text-primary transition-custom">M</button>
+                                <button class="px-4 py-2 border border-gray-300 rounded hover:border-primary hover:text-primary transition-custom">L</button>
+                                <button class="px-4 py-2 border border-gray-300 rounded hover:border-primary hover:text-primary transition-custom">XL</button>
+                                <button class="px-4 py-2 border border-gray-300 rounded hover:border-primary hover:text-primary transition-custom">XXL</button>
+                            </div>
+                        </div>
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <a href="https://taobao.com" target="_blank" class="bg-primary text-white px-8 py-3 rounded-lg font-bold hover:bg-primary/90 transition-custom transform hover:scale-[1.02] flex-1 flex items-center justify-center">
+                                立即购买
+                            </a>
+                            <button class="border-2 border-primary text-primary px-8 py-3 rounded-lg font-bold hover:bg-primary hover:text-white transition-custom flex items-center justify-center">
+                                <i class="fa fa-shopping-cart mr-2"></i> 加入购物车
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-16">
+                    <div class="border-t border-gray-200 pt-8">
+                        <h3 class="text-xl font-bold mb-4">产品详情</h3>
+                        <p class="text-gray-700 mb-4">
+                            安梦娜救灾物资系列采用高品质材料，坚固耐用，能够在各种恶劣环境下使用。我们的产品包括防寒服、雨衣、保暖内衣、军大衣，能够满足不同救灾场景的需求。
+                        </p>
+                        <p class="text-gray-700 mb-4">
+                            我们注重产品的质量和可靠性，确保每一件救灾物资都能在关键时刻发挥作用。无论是自然灾害还是其他紧急情况，我们的产品都能为您提供必要的支持和保障。
+                        </p>
+                        <h4 class="font-bold mt-6 mb-2">产品特点</h4>
+                        <ul class="list-disc list-inside text-gray-700 space-y-2">
+                            <li>高品质材料，坚固耐用</li>
+                            <li>适合各种恶劣环境</li>
+                            <li>多种应急救援物资可供选择</li>
+                            <li>质量可靠，关键时刻靠得住</li>
+                            <li>满足不同救灾场景的需求</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 床上用品详情 - 天丝四件套 -->
+            <div id="bedding-details" class="detail-content">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <img src="products/天丝四件套/大主图.jpg" alt="天丝四件套" class="rounded-lg shadow-lg w-full h-auto">
+                        <div class="grid grid-cols-4 gap-4 mt-4">
+                            <img src="products/天丝四件套/大主图.jpg" alt="天丝四件套-主图" class="rounded cursor-pointer border-2 border-primary">
+                            <img src="products/天丝四件套/小主图.jpg" alt="天丝四件套-细节1" class="rounded cursor-pointer">
+                            
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold mb-4 text-primary">天丝四件套</h3>
+                        <p class="text-gray-700 mb-6 leading-relaxed">
+                            安梦娜天丝四件套采用100%天丝面料，天丝是一种环保型纤维，具有天然的透气性和吸湿性，能够调节人体温度，让您在睡眠中保持舒适。
+                        </p>
+                        <div class="mb-6">
+                            <h4 class="font-bold mb-2">颜色选择</h4>
+                            <div class="flex space-x-4">
+                                <button class="w-10 h-10 rounded-full bg-primary cursor-pointer hover:ring-2 hover:ring-primary/50 transition-custom"></button>
+                                <button class="w-10 h-10 rounded-full bg-gray-800 cursor-pointer hover:ring-2 hover:ring-primary/50 transition-custom"></button>
+                                <button class="w-10 h-10 rounded-full bg-blue-500 cursor-pointer hover:ring-2 hover:ring-primary/50 transition-custom"></button>
+                                <button class="w-10 h-10 rounded-full bg-green-500 cursor-pointer hover:ring-2 hover:ring-primary/50 transition-custom"></button>
+                            </div>
+                        </div>
+                        <div class="mb-8">
+                            <h4 class="font-bold mb-2">尺寸选择</h4>
+                            <div class="flex space-x-4">
+                                <button class="px-4 py-2 border border-gray-300 rounded hover:border-primary hover:text-primary transition-custom">1.5米</button>
+                                <button class="px-4 py-2 border border-gray-300 rounded hover:border-primary hover:text-primary transition-custom bg-primary text-white">1.8米</button>
+                                <button class="px-4 py-2 border border-gray-300 rounded hover:border-primary hover:text-primary transition-custom">2.0米</button>
+                            </div>
+                        </div>
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <a href="https://taobao.com" target="_blank" class="bg-primary text-white px-8 py-3 rounded-lg font-bold hover:bg-primary/90 transition-custom transform hover:scale-[1.02] flex-1 flex items-center justify-center">
+                                立即购买
+                            </a>
+                            <button class="border-2 border-primary text-primary px-8 py-3 rounded-lg font-bold hover:bg-primary hover:text-white transition-custom flex items-center justify-center">
+                                <i class="fa fa-shopping-cart mr-2"></i> 加入购物车
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-16">
+                    <div class="border-t border-gray-200 pt-8">
+                        <h3 class="text-xl font-bold mb-4">产品详情</h3>
+                        <div class="text-gray-700 space-y-4">
+                            <!-- 长图展示 -->
+                            <div class="my-6">
+                                <img src="products/天丝四件套/素色天丝四件套.jpg" alt="素色天丝四件套-长图" class="w-full rounded-lg shadow-md">
+                            </div>
+                            
+                            <div>
+                                <h4 class="font-bold mb-2">产品说明</h4>
+                                <p>安梦娜素色天丝四件套采用来自台湾大钟印染厂的100支300针榉木木桨纤维精致而成，温馨素雅，简约现代，精致时尚。天丝面料特点主要有：（1）弹力轻松、舒适、持久；（2）面料柔软、挺括、悬垂性好；（3）布面平整、抗皱性好；（4）吸湿快干，手感滑爽，吸湿排汗性强（5）尺寸稳定性好，易于搭理。安梦娜天丝床上用品，拥有丝绸般的柔软和光泽，服贴柔顺，不会变型,湿强度和湿模量均比棉纤维高，具有粘胶纤维良好的吸湿性，又有合成纤维那样的高强度，水洗缩率较小。当有温度时，天丝织物会膨胀，它好象壁垒一样，可以在防雨水和雪的侵入同时，仍保持它具有的透气性。</p>
+                                <p>隐形遮盖式拉链及双拉链头、四角有绑绳的被套，宽边加长、无拉链的枕套枕里，欧式驳接的圆角床单等人性化的细节设计，以及精细入微的做工、实用大方的配套，真的做到贴近家庭，温馨生活，相信能为您的家居生活添一份温馨，多一分浪漫。</p>
+                                <p>经过活性丝光、裁剪、缝纫、熨烫等加工程序，产品不起毛、不退色，色牢度光泽度好，吸湿性吸汗性强，质量标准符合相关纺织行业及国家安全类别B类要求，质量等级为国标优等品。精美的玫红色彩盒包装，三层薄膜防水防潮，美观大方，物美价廉，情真意切，是家居礼品、福利品的首选佳品。</p>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-2">产品洗涤</h4>
+                                <ol class="list-decimal list-inside space-y-2">
+                                    <li>初次使用前，先用清水加点盐漂洗一次，这样可以增加色牢度，也可将表面的浆质及印染浮色去掉，使用起来会比较柔软，将来清洗时也不易褪色；</li>
+                                    <li>洗涤时，应先将中性洗涤剂倒入洗衣机的水中，水温不要超过30℃ ，待洗涤剂完全溶解后再放入床上用品，浸泡的时间不宜过久。洗涤时浸泡过久、水温过高、使用碱性洗涤剂、洗涤剂没有完全溶解均有可能造成不必要的褪色现象；</li>
+                                    <li>应将浅色产品与深色产品分开洗涤，避免互相染色。清洗后置于室外通风处悬挂晾干，避免暴晒，暴晒会破坏纤维结构，缩短使用寿命。若选择使用烘干机，建议选用低温烘干，温度不宜超过35℃ ，有助于避免产品过度缩水。</li>
+                                </ol>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-2">产品规格</h4>
+                                <p>被套203×228cm或228×245cm1床、床单250×250cm或260×280cm 1床、枕套48×74+6cm 一对</p>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-2">产品颜色</h4>
+                                <p>纯色, 白/米/粉红/浅咖啡/浅驼/香槟/深蓝</p>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-2">产品成分</h4>
+                                <p>100%天丝 进口榉木木桨纤维</p>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-2">适合人群</h4>
+                                <p>适用于1.5米、1.8米或2.0米宽的床，请根据您的需要选定一种规格的套件，价格一样。</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -182,11 +647,11 @@
         <i class="fa fa-weixin"></i>
     </button>
     
-    <!-- 微博（直接链接） -->
-    <a href="https://weibo.com" 
+    <!-- QQ空间（直接链接） -->
+    <a href="https://user.qzone.qq.com/1198306188" 
        target="_blank" 
        class="text-gray-400 hover:text-white transition-custom">
-        <i class="fa fa-weibo"></i>
+        <i class="fa fa-qq"></i>
     </a>
     
     <!-- 淘宝店铺 -->
@@ -321,6 +786,51 @@
         function hideWechatQR() {
             document.getElementById('wechatModal').classList.add('hidden');
         }
+
+        // 退出详情按钮点击事件
+        document.getElementById('close-detail').addEventListener('click', function() {
+            window.location.href = 'products.html';
+        });
+
+        // 产品切换功能
+        // 初始化时显示默认产品
+        document.addEventListener('DOMContentLoaded', function() {
+            // 获取URL中的哈希值
+            const hash = window.location.hash;
+            
+            // 显示对应的产品详情，如果没有哈希值则显示床上用品详情
+            if (hash && document.querySelector(hash)) {
+                showProductDetails(hash);
+            } else {
+                showProductDetails('#bedding-details');
+            }
+        });
+
+        // 产品详情切换函数
+        function showProductDetails(productId) {
+            // 隐藏所有产品详情
+            document.querySelectorAll('.detail-content').forEach(content => {
+                content.classList.add('hidden');
+            });
+
+            // 显示选中的产品详情
+            const selectedProduct = document.querySelector(productId);
+            if (selectedProduct) {
+                selectedProduct.classList.remove('hidden');
+                
+                // 更新URL哈希值
+                window.location.hash = productId;
+            }
+        }
+
+        // 为导航菜单和页脚的产品链接添加点击事件
+        document.querySelectorAll('a[href^="#bedding-details"], a[href^="#tent-details"], a[href^="#foldable-bed-details"], a[href^="#mosquito-net-details"], a[href^="#military-quilt-details"], a[href^="#furniture-details"], a[href^="#emergency-lighting-details"], a[href^="#relief-materials-details"]').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const productId = this.getAttribute('href');
+                showProductDetails(productId);
+            });
+        });
     </script>
 </body>
 </html>
